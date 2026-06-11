@@ -9,21 +9,10 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ialf.in";
 const PAGE_TITLE = "IELTS";
 
 export const metadata = {
-  title: `${PAGE_TITLE} • IALF`,
-  description: "IELTS prep with band-focused roadmaps, mock tests, and one-to-one mentoring.",
+  title: "IELTS Coaching & Preparation Ludhiana | IALF Immigration",
+  description:
+    "Expert IELTS coaching in Ludhiana for Canada immigration. Band-focused preparation, mock tests, and one-to-one mentoring to achieve your target score.",
   alternates: { canonical: `${SITE_URL}/tests/ielts` },
-  openGraph: {
-    title: `${PAGE_TITLE} • IALF`,
-    description: "IELTS prep with band-focused roadmaps, mock tests, and one-to-one mentoring.",
-    url: `${SITE_URL}/tests/ielts`,
-    images: [{ url: `${SITE_URL}/header.png`, width: 1200, height: 630, alt: PAGE_TITLE }]
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${PAGE_TITLE} • IALF`,
-    description: "IELTS prep with band-focused roadmaps, mock tests, and one-to-one mentoring.",
-    images: [`${SITE_URL}/header.png`]
-  }
 };
 
 const sideLinks = [
@@ -40,7 +29,7 @@ export default function IELTSPage() {
       <Navbar />
 
       <div className="relative h-[170px] w-full overflow-hidden bg-sky-500/70">
-        <Image src="/header.png" alt="Header" fill className="object-cover opacity-60" sizes="100vw" priority />
+        <Image src="/header.png" alt="" fill className="object-cover opacity-60" sizes="100vw" priority />
         <div className="absolute left-10 top-1/2 -translate-y-1/2 transform text-white md:left-40">
           <h1 className="mb-1 text-3xl font-bold drop-shadow md:text-4xl">{PAGE_TITLE}</h1>
           <div className="text-sm font-normal text-white/80">

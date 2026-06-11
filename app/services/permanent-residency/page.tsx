@@ -8,21 +8,10 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ialf.in";
 const PAGE_TITLE = "Permanent Residency";
 
 export const metadata = {
-  title: `${PAGE_TITLE} • IALF`,
-  description: "PR strategy for Canada with profile scoring, document readiness, and end-to-end submission.",
+  title: "Canada Permanent Residency (PR) Consultants Ludhiana",
+  description:
+    "Apply for Canada PR with expert guidance from IALF Immigration Ludhiana. Express Entry, PNP, and other PR pathways. Trusted Canada PR consultants in Punjab.",
   alternates: { canonical: `${SITE_URL}/services/permanent-residency` },
-  openGraph: {
-    title: `${PAGE_TITLE} • IALF`,
-    description: "PR strategy for Canada with profile scoring, document readiness, and end-to-end submission.",
-    url: `${SITE_URL}/services/permanent-residency`,
-    images: [{ url: `${SITE_URL}/header.png`, width: 1200, height: 630, alt: PAGE_TITLE }]
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${PAGE_TITLE} • IALF`,
-    description: "PR strategy for Canada with profile scoring, document readiness, and end-to-end submission.",
-    images: [`${SITE_URL}/header.png`]
-  }
 };
 
 const sideLinks = [
@@ -53,7 +42,7 @@ export default function PermanentResidencyPage() {
       <Navbar />
 
       <div className="relative h-[170px] w-full overflow-hidden bg-sky-500/70">
-        <Image src="/header.png" alt="Header" fill className="object-cover opacity-60" sizes="100vw" priority />
+        <Image src="/header.png" alt="" fill className="object-cover opacity-60" sizes="100vw" priority />
         <div className="absolute left-10 top-1/2 -translate-y-1/2 transform text-white md:left-40">
           <h1 className="mb-1 text-3xl font-bold drop-shadow md:text-4xl">{PAGE_TITLE}</h1>
           <div className="text-sm font-normal text-white/80">

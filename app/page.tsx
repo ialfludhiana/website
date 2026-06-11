@@ -41,34 +41,10 @@ const contactPoint = {
 };
 
 export const metadata: Metadata = {
-  title: "IALF Immigration & Visa Consultancy | Trusted Visa Experts",
+  title: "Best Canada Immigration Consultants in Ludhiana, Punjab",
   description:
-    "IALF offers student visa, permanent residency, spousal sponsorship, and business/visitor visa support with transparent guidance and expert case handling.",
-  alternates: {
-    canonical: `${SITE_URL}/`,
-  },
-  openGraph: {
-    title: "IALF Immigration & Visa Consultancy | Trusted Visa Experts",
-    description:
-      "Comprehensive immigration support including student visas, PR, spousal sponsorship, and business/visitor visas.",
-    url: `${SITE_URL}/`,
-    siteName: "IALF Immigration & Visa Consultancy",
-    images: [
-      {
-        url: `${SITE_URL}/logo.png`,
-        width: 512,
-        height: 512,
-        alt: "IALF Immigration & Visa Consultancy",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "IALF Immigration & Visa Consultancy | Trusted Visa Experts",
-    description:
-      "Student visas, PR, spousal sponsorship, and visitor/business visa guidance with trusted experts.",
-    images: [`${SITE_URL}/logo.png`],
-  },
+    "IALF Immigration — #1 Canada visa consultants in Ludhiana. Get expert help for Student Visa, Permanent Residency, Spousal Sponsorship, Visitor Visa. Free consultation available.",
+  alternates: { canonical: "https://ialf.in" },
 };
 
 export default function HomePage() {

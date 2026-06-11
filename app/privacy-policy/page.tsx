@@ -36,7 +36,7 @@ export default function PrivacyPolicyPage() {
       <Navbar />
 
       <div className="relative h-[170px] w-full overflow-hidden bg-sky-500/70">
-        <Image src="/header.png" alt="Header" fill className="object-cover opacity-60" sizes="100vw" priority />
+        <Image src="/header.png" alt="" fill className="object-cover opacity-60" sizes="100vw" priority />
         <div className="absolute left-10 top-1/2 -translate-y-1/2 transform text-white md:left-40">
           <h1 className="mb-1 text-3xl font-bold drop-shadow md:text-4xl">{PAGE_TITLE}</h1>
           <div className="text-sm font-normal text-white/80">

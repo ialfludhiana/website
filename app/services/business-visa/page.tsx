@@ -7,10 +7,10 @@ import TestimonialLogos from "@/components/testimonial-logos";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ialf.in";
 
 export const metadata = {
-  title: "Business Visa • IALF",
+  title: "Canada Business Visa Consultants Ludhiana",
   description:
-    "Secure your Canadian Business Visa with IALF. Guidance for business visitors, investor visas, and entrepreneur pathways.",
-  alternates: { canonical: `${SITE_URL}/services/business-visa` }
+    "Apply for Canada business visa with expert guidance from IALF Immigration Ludhiana. Business visitor visa, investor visa and entrepreneur immigration pathways.",
+  alternates: { canonical: `${SITE_URL}/services/business-visa` },
 };
 
 const serviceLinks = [
@@ -28,7 +28,7 @@ export default function BusinessVisaPage() {
       <Navbar />
 
       <div className="relative h-[170px] w-full overflow-hidden bg-sky-500/70">
-        <Image src="/header.png" alt="Header" fill className="object-cover opacity-60" sizes="100vw" priority />
+        <Image src="/header.png" alt="" fill className="object-cover opacity-60" sizes="100vw" priority />
         <div className="absolute left-10 top-1/2 -translate-y-1/2 transform text-white md:left-40">
           <h1 className="mb-1 text-3xl font-bold drop-shadow md:text-4xl">Business Visa</h1>
           <div className="text-sm font-normal text-white/80">

@@ -9,9 +9,10 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ialf.in";
 export const revalidate = 60;
 
 export const metadata = {
-  title: "Video Gallery • IALF",
-  description: "Watch IALF educational videos, seminars, and client success stories.",
-  alternates: { canonical: `${SITE_URL}/gallery/videos` }
+  title: "Immigration Videos | IALF Ludhiana",
+  description:
+    "Watch IALF Immigration videos on Canada visa processes, seminars, and client success stories. Educational content from Ludhiana's trusted immigration consultants.",
+  alternates: { canonical: `${SITE_URL}/gallery/videos` },
 };
 
 type VideoItem = {
@@ -59,7 +60,7 @@ export default async function VideosPage() {
       <Navbar />
 
       <div className="relative h-[170px] w-full overflow-hidden bg-sky-500/70">
-        <Image src="/header.png" alt="Header" fill className="object-cover opacity-60" sizes="100vw" priority />
+        <Image src="/header.png" alt="" fill className="object-cover opacity-60" sizes="100vw" priority />
         <div className="absolute left-10 top-1/2 -translate-y-1/2 transform text-white md:left-40">
           <h1 className="mb-1 text-3xl font-bold drop-shadow md:text-4xl">Video Gallery</h1>
           <div className="text-sm font-normal text-white/80">

@@ -8,33 +8,10 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ialf.in";
 
 export const metadata = {
-  title: "Contact • IALF",
+  title: "Contact IALF Immigration Consultants | Book Free Consultation",
   description:
-    "Get in touch with IALF Immigration & Visa Consultancy for student visas, permanent residency, refused case guidance, and more.",
-  alternates: {
-    canonical: `${SITE_URL}/contact`
-  },
-  openGraph: {
-    title: "Contact • IALF",
-    description:
-      "Reach IALF for expert help on student visas, permanent residency, refused cases, and immigration consulting.",
-    url: `${SITE_URL}/contact`,
-    images: [
-      {
-        url: `${SITE_URL}/header.png`,
-        width: 1200,
-        height: 630,
-        alt: "Contact IALF"
-      }
-    ]
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Contact • IALF",
-    description:
-      "Reach IALF for expert help on student visas, permanent residency, refused cases, and immigration consulting.",
-    images: [`${SITE_URL}/header.png`]
-  }
+    "Contact IALF Immigration in Ludhiana for a free consultation. Call us or fill the form to get expert Canada visa guidance. Located in Ludhiana, Punjab.",
+  alternates: { canonical: `${SITE_URL}/contact` },
 };
 
 export default function ContactPage() {
@@ -45,7 +22,7 @@ export default function ContactPage() {
       <div className="relative h-[170px] w-full overflow-hidden bg-sky-500/70">
         <Image
           src="/header.png"
-          alt="Header"
+          alt=""
           fill
           className="object-cover opacity-60"
           sizes="100vw"

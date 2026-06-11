@@ -6,9 +6,11 @@ import SubmitTestimonialForm from "./submit-testimonial-form";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ialf.in";
 
 export const metadata = {
-  title: "Submit Your Testimonial • IALF",
-  description: "Share your IALF immigration success story. Submit a testimonial and inspire others on their journey.",
-  alternates: { canonical: `${SITE_URL}/submit-testimonial` }
+  title: "Share Your Success Story | IALF Immigration",
+  description:
+    "Share your IALF immigration success story. Submit a testimonial and inspire others on their Canada immigration journey.",
+  alternates: { canonical: `${SITE_URL}/submit-testimonial` },
+  robots: { index: false },
 };
 
 export default function SubmitTestimonialPage() {
@@ -17,7 +19,7 @@ export default function SubmitTestimonialPage() {
       <Navbar />
 
       <div className="relative h-[170px] w-full overflow-hidden bg-sky-500/70">
-        <Image src="/header.png" alt="Header" fill className="object-cover opacity-60" sizes="100vw" priority />
+        <Image src="/header.png" alt="" fill className="object-cover opacity-60" sizes="100vw" priority />
         <div className="absolute left-10 top-1/2 -translate-y-1/2 transform text-white md:left-40">
           <h1 className="mb-1 text-3xl font-bold drop-shadow md:text-4xl">Submit Your Testimonial</h1>
           <div className="text-sm font-normal text-white/80">

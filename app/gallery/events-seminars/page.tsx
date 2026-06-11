@@ -10,9 +10,10 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ialf.in";
 export const revalidate = 60;
 
 export const metadata = {
-  title: "Events & Seminars Gallery • IALF",
-  description: "Photos from IALF events, seminars, and educational sessions.",
-  alternates: { canonical: `${SITE_URL}/gallery/events-seminars` }
+  title: "Immigration Seminars & Events | IALF Ludhiana",
+  description:
+    "Browse photos from IALF Immigration seminars, events, and educational sessions in Ludhiana. Stay informed about Canada immigration updates.",
+  alternates: { canonical: `${SITE_URL}/gallery/events-seminars` },
 };
 
 type EventItem = {
@@ -70,7 +71,7 @@ export default async function EventsGalleryPage() {
       <Navbar />
 
       <div className="relative h-[170px] w-full overflow-hidden bg-sky-500/70">
-        <Image src="/header.png" alt="Header" fill className="object-cover opacity-60" sizes="100vw" priority />
+        <Image src="/header.png" alt="" fill className="object-cover opacity-60" sizes="100vw" priority />
         <div className="absolute left-10 top-1/2 -translate-y-1/2 transform text-white md:left-40">
           <h1 className="mb-1 text-3xl font-bold drop-shadow md:text-4xl">Events &amp; Seminars</h1>
           <div className="text-sm font-normal text-white/80">

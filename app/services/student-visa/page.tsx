@@ -9,24 +9,10 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ialf.in";
 const PAGE_TITLE = "Student Visa";
 
 export const metadata = {
-  title: `${PAGE_TITLE} • IALF`,
+  title: "Canada Student Visa Consultants Ludhiana | Study in Canada",
   description:
-    "End-to-end student visa guidance with SOP crafting, admission support, funds readiness, and visa interview prep.",
+    "Get Canada student visa with IALF Immigration, Ludhiana. Expert guidance for study permit applications, university admissions and SDS program. Start your Canada education journey.",
   alternates: { canonical: `${SITE_URL}/services/student-visa` },
-  openGraph: {
-    title: `${PAGE_TITLE} • IALF`,
-    description:
-      "End-to-end student visa guidance with SOP crafting, admission support, funds readiness, and visa interview prep.",
-    url: `${SITE_URL}/services/student-visa`,
-    images: [{ url: `${SITE_URL}/header.png`, width: 1200, height: 630, alt: PAGE_TITLE }]
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${PAGE_TITLE} • IALF`,
-    description:
-      "End-to-end student visa guidance with SOP crafting, admission support, funds readiness, and visa interview prep.",
-    images: [`${SITE_URL}/header.png`]
-  }
 };
 
 const faqs = [
@@ -97,7 +83,7 @@ export default function StudentVisaPage() {
       <Navbar />
 
       <div className="relative h-[170px] w-full overflow-hidden bg-sky-500/70">
-        <Image src="/header.png" alt="Header" fill className="object-cover opacity-60" sizes="100vw" priority />
+        <Image src="/header.png" alt="" fill className="object-cover opacity-60" sizes="100vw" priority />
         <div className="absolute left-10 top-1/2 -translate-y-1/2 transform text-white md:left-40">
           <h1 className="mb-1 text-3xl font-bold drop-shadow md:text-4xl">{PAGE_TITLE}</h1>
           <div className="text-sm font-normal text-white/80">

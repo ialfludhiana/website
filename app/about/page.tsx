@@ -12,20 +12,9 @@ import SiteFooter from "@/components/site-footer";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ialf.in";
 
 export const metadata = {
-  title: "About • IALF",
+  title: "About IALF Immigration Consultants Ludhiana",
   description:
-    "Learn About • IALF Immigration & Visa Consultancy. Government-licensed experts for student visas, permanent residency, and refused case specialists based in Ludhiana.",
-  keywords: [
-    "ialf",
-    "ialf india",
-    "ialf uk",
-    "ialf ludhiana",
-    "best immigration consultant",
-    "best immigration consultant in ludhiana",
-    "refused case specialist",
-    "immigration & visa consultancy",
-    "immigration company"
-  ],
+    "Learn about IALF Immigration — experienced Canada visa and immigration consultants based in Ludhiana, Punjab with years of expertise helping clients achieve their immigration goals.",
   alternates: {
     canonical: `${SITE_URL}/about`
   },
@@ -192,8 +181,8 @@ export default function AboutPage() {
                 <Image src="/parminder.jpg" alt="Managing Director" width={500} height={400} className="h-72 w-full object-cover grayscale" />
                 <div className="relative h-20 bg-gray-100 py-2 px-5 text-right">
                   <div className="flex items-center justify-end gap-16">
-                    <Image src="/stamp1.png" alt="Stamp" width={120} height={120} className="h-32 -mt-10 w-auto" />
-                    <Image src="/signatures.png" alt="Signature" width={140} height={80} className="h-24 -mt-8 w-auto" />
+                    <Image src="/stamp1.png" alt="" width={120} height={120} className="h-32 -mt-10 w-auto" />
+                    <Image src="/signatures.png" alt="" width={140} height={80} className="h-24 -mt-8 w-auto" />
                   </div>
                 </div>
               </div>

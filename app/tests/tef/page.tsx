@@ -9,21 +9,10 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ialf.in";
 const PAGE_TITLE = "TEF (French)";
 
 export const metadata = {
-  title: `${PAGE_TITLE} • IALF`,
-  description: "TEF prep focused on French immigration requirements with speaking, writing, listening, and reading drills.",
+  title: "TEF Canada Preparation Ludhiana | IALF Immigration",
+  description:
+    "Prepare for TEF Canada with expert coaching at IALF Ludhiana. Improve your French score for immigration with targeted speaking, writing, listening, and reading drills.",
   alternates: { canonical: `${SITE_URL}/tests/tef` },
-  openGraph: {
-    title: `${PAGE_TITLE} • IALF`,
-    description: "TEF prep focused on French immigration requirements with speaking, writing, listening, and reading drills.",
-    url: `${SITE_URL}/tests/tef`,
-    images: [{ url: `${SITE_URL}/header.png`, width: 1200, height: 630, alt: PAGE_TITLE }]
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${PAGE_TITLE} • IALF`,
-    description: "TEF prep focused on French immigration requirements with speaking, writing, listening, and reading drills.",
-    images: [`${SITE_URL}/header.png`]
-  }
 };
 
 const sideLinks = [
@@ -40,7 +29,7 @@ export default function TEFPage() {
       <Navbar />
 
       <div className="relative h-[170px] w-full overflow-hidden bg-sky-500/70">
-        <Image src="/header.png" alt="Header" fill className="object-cover opacity-60" sizes="100vw" priority />
+        <Image src="/header.png" alt="" fill className="object-cover opacity-60" sizes="100vw" priority />
         <div className="absolute left-10 top-1/2 -translate-y-1/2 transform text-white md:left-40">
           <h1 className="mb-1 text-3xl font-bold drop-shadow md:text-4xl">{PAGE_TITLE}</h1>
           <div className="text-sm font-normal text-white/80">

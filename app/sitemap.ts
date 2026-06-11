@@ -1,37 +1,28 @@
 import { MetadataRoute } from "next";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ialf.in";
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  const baseUrl = "https://ialf.in";
+  const lastModified = new Date();
 
-  const staticRoutes = [
-    { url: `${BASE_URL}/`, priority: 1.0, changeFrequency: "weekly" as const },
-    { url: `${BASE_URL}/about`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE_URL}/contact`, priority: 0.9, changeFrequency: "monthly" as const },
-    { url: `${BASE_URL}/gallery/testimonials`, priority: 0.7, changeFrequency: "weekly" as const },
-    { url: `${BASE_URL}/gallery/events-seminars`, priority: 0.7, changeFrequency: "weekly" as const },
-    { url: `${BASE_URL}/gallery/videos`, priority: 0.6, changeFrequency: "monthly" as const },
-    { url: `${BASE_URL}/services/student-visa`, priority: 0.9, changeFrequency: "monthly" as const },
-    { url: `${BASE_URL}/services/permanent-residency`, priority: 0.9, changeFrequency: "monthly" as const },
-    { url: `${BASE_URL}/services/spousal-sponsorship`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE_URL}/services/startup-visa`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE_URL}/services/visitor-visa`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE_URL}/services/business-visa`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE_URL}/tests/ielts`, priority: 0.7, changeFrequency: "monthly" as const },
-    { url: `${BASE_URL}/tests/pte`, priority: 0.7, changeFrequency: "monthly" as const },
-    { url: `${BASE_URL}/tests/tef`, priority: 0.7, changeFrequency: "monthly" as const },
-    { url: `${BASE_URL}/tests/tcf`, priority: 0.7, changeFrequency: "monthly" as const },
-    { url: `${BASE_URL}/tests/delf-dalf`, priority: 0.6, changeFrequency: "monthly" as const },
-    { url: `${BASE_URL}/submit-testimonial`, priority: 0.5, changeFrequency: "yearly" as const },
-    { url: `${BASE_URL}/terms`, priority: 0.3, changeFrequency: "yearly" as const },
-    { url: `${BASE_URL}/privacy-policy`, priority: 0.3, changeFrequency: "yearly" as const },
+  return [
+    { url: baseUrl, lastModified, changeFrequency: "weekly", priority: 1.0 },
+    { url: `${baseUrl}/about`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/contact`, lastModified, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/services/student-visa`, lastModified, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/services/permanent-residency`, lastModified, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/services/spousal-sponsorship`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/services/visitor-visa`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/services/startup-visa`, lastModified, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/services/business-visa`, lastModified, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/tests/ielts`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/tests/pte`, lastModified, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/tests/tef`, lastModified, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${baseUrl}/tests/tcf`, lastModified, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${baseUrl}/tests/delf-dalf`, lastModified, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${baseUrl}/gallery/testimonials`, lastModified, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${baseUrl}/gallery/events-seminars`, lastModified, changeFrequency: "weekly", priority: 0.6 },
+    { url: `${baseUrl}/gallery/videos`, lastModified, changeFrequency: "weekly", priority: 0.6 },
+    { url: `${baseUrl}/terms`, lastModified, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${baseUrl}/privacy-policy`, lastModified, changeFrequency: "yearly", priority: 0.3 },
   ];
-
-  return staticRoutes.map(({ url, priority, changeFrequency }) => ({
-    url,
-    lastModified: now,
-    changeFrequency,
-    priority,
-  }));
 }
