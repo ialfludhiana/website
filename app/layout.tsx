@@ -26,6 +26,14 @@ export const metadata: Metadata = {
   creator: "IALF Immigration",
   publisher: "IALF Immigration",
   formatDetection: { email: false, address: false, telephone: false },
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    apple: "/favicon.png",
+    shortcut: "/favicon.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
