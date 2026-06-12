@@ -3,6 +3,7 @@ import { Navbar } from "@/components/navbar";
 import SiteFooter from "@/components/site-footer";
 import TestimonialLogos from "@/components/testimonial-logos";
 import { getRows } from "@/lib/google";
+import VideosClient from "./videos-client";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ialf.in";
 
@@ -23,11 +24,8 @@ type VideoItem = {
 };
 
 function extractYouTubeId(url: string): string {
-  const watchMatch = url.match(/[?&]v=([^&]+)/);
-  if (watchMatch) return watchMatch[1];
-  const shortMatch = url.match(/youtu\.be\/([^?]+)/);
-  if (shortMatch) return shortMatch[1];
-  return "";
+  const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/);
+  return match ? match[1] : "";
 }
 
 async function getVideos(): Promise<VideoItem[]> {
@@ -70,29 +68,7 @@ export default async function VideosPage() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        {videos.length === 0 ? (
-          <p className="py-20 text-center text-slate-500">Videos coming soon.</p>
-        ) : (
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {videos.map((video) => (
-              <div key={video.id} className="flex flex-col">
-                <iframe
-                  src={`https://www.youtube.com/embed/${video.videoId}`}
-                  title={video.title}
-                  className="aspect-video w-full"
-                  allowFullScreen
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                />
-                {video.title && (
-                  <p className="mt-2 font-semibold text-slate-900">{video.title}</p>
-                )}
-                {video.description && (
-                  <p className="mt-1 text-sm text-slate-500">{video.description}</p>
-                )}
-              </div>
-            ))}
-          </div>
-        )}
+        <VideosClient videos={videos} />
       </div>
 
       <TestimonialLogos />
