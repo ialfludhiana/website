@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { getRows } from "@/lib/google";
 
+export const revalidate = 300;
+
 export default async function TestimonialLogos() {
   let images: string[] = [];
 

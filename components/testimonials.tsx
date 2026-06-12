@@ -1,6 +1,8 @@
 import { getRows } from "@/lib/google";
 import TestimonialsClient from "./testimonials-client";
 
+export const revalidate = 300;
+
 export default async function Testimonials() {
   let items: Array<{
     id: string;

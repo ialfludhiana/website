@@ -6,7 +6,7 @@ import { getRows } from "@/lib/google";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ialf.in";
 
-export const revalidate = 60;
+export const revalidate = 300;
 
 export const metadata = {
   title: "Client Success Stories | IALF Immigration Ludhiana",

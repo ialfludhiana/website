@@ -7,7 +7,7 @@ import EventsClient from "./events-client";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ialf.in";
 
-export const revalidate = 60;
+export const revalidate = 300;
 
 export const metadata = {
   title: "Immigration Seminars & Events | IALF Ludhiana",
