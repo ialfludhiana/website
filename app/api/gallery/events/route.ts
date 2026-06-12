@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { getSheetsClient } from "@/lib/google";
 
+export const dynamic = "force-dynamic";
+
 const SHEET_ID = process.env.GOOGLE_SHEET_GALLERY_ID!;
 
 export async function GET() {

@@ -3,6 +3,8 @@ import { v4 as uuidv4 } from "uuid";
 import { appendRow } from "@/lib/google";
 import { uploadImage } from "@/lib/cloudinary";
 
+export const dynamic = "force-dynamic";
+
 const SHEET_ID = process.env.GOOGLE_SHEET_TESTIMONIALS_ID!;
 
 export async function POST(request: NextRequest) {

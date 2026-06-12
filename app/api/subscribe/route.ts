@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { v4 as uuidv4 } from "uuid";
 import { getRows, appendRow } from "@/lib/google";
 
+export const dynamic = "force-dynamic";
+
 const SHEET_ID = process.env.GOOGLE_SHEET_SUBSCRIBERS_ID!;
 const SHEET_NAME = "Subscribers";
 
