@@ -1,25 +1,22 @@
+"use client";
+
 import Image from "next/image";
-import { getRows } from "@/lib/google";
+import { useEffect, useState } from "react";
 
-export const revalidate = 300;
+export default function TestimonialLogos() {
+  const [images, setImages] = useState<string[]>([]);
 
-export default async function TestimonialLogos() {
-  let images: string[] = [];
-
-  try {
-    const rows = await getRows(
-      process.env.GOOGLE_SHEET_TESTIMONIALS_ID!,
-      "Testimonials",
-      "A:G"
-    );
-    images = rows
-      .filter((r) => r.approved === "TRUE" && r.image_url)
-      .map((r) => r.image_url)
-      .filter(Boolean)
-      .slice(0, 40) as string[];
-  } catch {
-    images = [];
-  }
+  useEffect(() => {
+    fetch("/api/testimonials/public")
+      .then((r) => r.json())
+      .then((data) => {
+        const imgs = ((data.testimonials || []) as { imageUrl: string | null }[])
+          .map((t) => t.imageUrl)
+          .filter((url): url is string => Boolean(url))
+          .slice(0, 40);
+        setImages(imgs);
+      });
+  }, []);
 
   if (images.length === 0) return null;
 
@@ -32,7 +29,7 @@ export default async function TestimonialLogos() {
               <Image
                 key={`${img}-${idx}`}
                 src={img}
-                alt={`testimonial-logo-${idx + 1}`}
+                alt=""
                 width={56}
                 height={56}
                 className="h-[63.3px] w-[63.3px] object-contain opacity-80 grayscale"

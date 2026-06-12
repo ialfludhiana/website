@@ -40,6 +40,8 @@ const contactPoint = {
   url: `${SITE_URL}/#appointment`,
 };
 
+export const revalidate = 300;
+
 export const metadata: Metadata = {
   title: "Best Canada Immigration Consultants in Ludhiana, Punjab",
   description:

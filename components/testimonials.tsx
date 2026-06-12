@@ -1,35 +1,24 @@
-import { getRows } from "@/lib/google";
+"use client";
+
+import { useEffect, useState } from "react";
 import TestimonialsClient from "./testimonials-client";
 
-export const revalidate = 300;
+type Testimonial = {
+  id: string;
+  name: string | null;
+  comment: string | null;
+  imageUrl: string | null;
+  visaType: string | null;
+};
 
-export default async function Testimonials() {
-  let items: Array<{
-    id: string;
-    name: string | null;
-    comment: string | null;
-    imageUrl: string | null;
-    visaType: string | null;
-  }> = [];
+export default function Testimonials() {
+  const [items, setItems] = useState<Testimonial[]>([]);
 
-  try {
-    const rows = await getRows(
-      process.env.GOOGLE_SHEET_TESTIMONIALS_ID!,
-      "Testimonials",
-      "A:G"
-    );
-    items = rows
-      .filter((r) => r.approved === "TRUE")
-      .map((r) => ({
-        id: r.id || "",
-        name: r.name || null,
-        comment: r.comment || null,
-        imageUrl: r.image_url || null,
-        visaType: r.visa_type || null,
-      }));
-  } catch {
-    items = [];
-  }
+  useEffect(() => {
+    fetch("/api/testimonials/public")
+      .then((r) => r.json())
+      .then((data) => setItems(data.testimonials || []));
+  }, []);
 
   return <TestimonialsClient items={items} />;
 }
